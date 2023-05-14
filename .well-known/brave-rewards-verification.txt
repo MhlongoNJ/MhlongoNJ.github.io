@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: mhlongonj.github.io
+Token: 538a1a5f5866179027a5b25ce0d2bdfa68d9ffb8eb180fc3b28f61811ad2f28e
