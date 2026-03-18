@@ -1,134 +1,534 @@
 <!DOCTYPE html>
-<html  >
+<html lang="en">
 <head>
 <meta name="google-adsense-account" content="ca-pub-3804240310705728">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3804240310705728"
-     crossorigin="anonymous"></script>
-  
-  <!-- Site made with Mobirise Website Builder v5.5.2, https://mobirise.com -->
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3435816500485124"
-     crossorigin="anonymous"></script>
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.5.2, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/icon-512-by-512-128x128.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Plug</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap');
+
+  :root {
+    --red: #ff2244;
+    --dark-red: #8b0000;
+    --bg: #0a0a0f;
+    --card: #0f0f1a;
+    --border: #1a1a2e;
+    --text: #c8c8d8;
+    --accent: #ff2244;
+    --glow: 0 0 20px rgba(255,34,68,0.4);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Animated background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,34,68,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,34,68,0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes gridMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50px); }
+  }
+
+  /* Scanline effect */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.07) 2px,
+      rgba(0,0,0,0.07) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .dragon-icon {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 20px rgba(255,34,68,0.8));
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { filter: drop-shadow(0 0 15px rgba(255,34,68,0.8)); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 35px rgba(255,34,68,1)); transform: scale(1.05); }
+  }
+
+  .app-name {
+    font-family: 'Orbitron', monospace;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-shadow: 0 0 30px rgba(255,34,68,0.5);
+  }
+
+  h1 span { color: var(--red); }
+
+  .header-line {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+    margin: 20px auto;
+    position: relative;
+  }
+
+  .header-line::before, .header-line::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+    top: -2px;
+  }
+  .header-line::before { left: 0; }
+  .header-line::after { right: 0; }
+
+  .effective-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,34,68,0.1);
+    border: 1px solid rgba(255,34,68,0.3);
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 13px;
+    color: var(--red);
+    letter-spacing: 1px;
+    margin-top: 12px;
+  }
+
+  .dot { width: 6px; height: 6px; background: var(--red); border-radius: 50%; animation: blink 1.5s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+  /* Intro card */
+  .intro-card {
+    background: linear-gradient(135deg, rgba(255,34,68,0.08), rgba(139,0,0,0.05));
+    border: 1px solid rgba(255,34,68,0.2);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: linear-gradient(180deg, var(--red), transparent);
+  }
+
+  .intro-card p { color: #a0a0b8; font-size: 15px; }
+
+  /* Section cards */
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .section:hover {
+    border-color: rgba(255,34,68,0.3);
+    box-shadow: var(--glow);
+  }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--red), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .section:hover::before { opacity: 1; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(255,34,68,0.1);
+    border: 1px solid rgba(255,34,68,0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(13px, 2.5vw, 16px);
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  p { color: var(--text); margin-bottom: 12px; font-size: 15px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* Lists */
+  ul { list-style: none; padding: 0; }
+
+  ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 15px;
+  }
+
+  ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-size: 12px;
+    top: 3px;
+  }
+
+  /* Special location section */
+  .location-section {
+    background: linear-gradient(135deg, #0f0f1a, #12081a);
+    border-color: rgba(255,34,68,0.25);
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .location-card {
+    background: rgba(255,34,68,0.06);
+    border: 1px solid rgba(255,34,68,0.15);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .location-card .lc-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+  .location-card h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .location-card p { font-size: 13px; color: #888; margin: 0; }
+
+  /* Third-party link */
+  .link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,34,68,0.08);
+    border: 1px solid rgba(255,34,68,0.25);
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: var(--red);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Orbitron', monospace;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+  }
+
+  .link-pill:hover {
+    background: rgba(255,34,68,0.15);
+    box-shadow: 0 0 15px rgba(255,34,68,0.3);
+  }
+
+  /* Contact section */
+  .contact-section {
+    background: linear-gradient(135deg, rgba(255,34,68,0.06), rgba(139,0,0,0.08));
+    border-color: rgba(255,34,68,0.3);
+    text-align: center;
+  }
+
+  .contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,34,68,0.1);
+    border: 1px solid rgba(255,34,68,0.4);
+    border-radius: 30px;
+    padding: 12px 28px;
+    color: #fff;
+    font-family: 'Orbitron', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    word-break: break-all;
+    box-shadow: 0 0 20px rgba(255,34,68,0.2);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+    color: #444;
+    font-size: 13px;
+    font-family: 'Orbitron', monospace;
+    letter-spacing: 1px;
+  }
+
+  footer span { color: var(--red); }
+
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0 20px;
+  }
+  .divider-line { flex: 1; height: 1px; background: var(--border); }
+  .divider-dot { width: 4px; height: 4px; background: var(--red); border-radius: 50%; }
+</style>
 </head>
 <body>
-  
-  <section data-bs-version="5.1" class="header18 cid-sZvocUKbm2 mbr-fullscreen" id="header18-0">
+<div class="container">
 
-    
-
-    
-
-    <div class="align-center container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"><strong>Privacy Policy</strong></h1>
-                
-                <p class="mbr-text mbr-fonts-style mbr-white display-7">Cyber Terrorist Dragon built the Plug as a Free app. This SERVICE is provided by Cyber Terrorist Dragon at no cost and is intended for use as is.
-<br>
-<br>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
-<br>
-<br>If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
-<br>
-<br>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Plug unless otherwise defined in this Privacy Policy.
-<br>
-<br>Information Collection and Use
-<br>
-<br>For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.
-<br>
-<br>The app does use third-party services that may collect information used to identify you.
-<br>
-<br>Link to the privacy policy of third-party service providers used by the app
-<br>
-<br>Google Play Services
-<br>Log Data
-<br>
-<br>I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
-<br>
-<br>Cookies
-<br>
-<br>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
-<br>
-<br>This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
-<br>
-<br>Service Providers
-<br>
-<br>I may employ third-party companies and individuals due to the following reasons:
-<br>
-<br>To facilitate our Service;
-<br>To provide the Service on our behalf;
-<br>To perform Service-related services; or
-<br>To assist us in analyzing how our Service is used.
-<br>I want to inform users of this Service that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
-<br>
-<br>Security
-<br>
-<br>I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
-<br>
-<br>Links to Other Sites
-<br>
-<br>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
-<br>
-<br>Children’s Privacy
-<br>
-<br>These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13 years of age. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do the necessary actions.
-<br>
-<br>Location Data Usage
-<br>
-<br>Our app, Plug, is designed to provide users with information and tools to keep their devices safe and secure. One of the features in our app is the Location Monitor dashboard, which helps users keep their devices safe by monitoring changes to the location service.
-<br>
-<br>Why We Use Location Data
-<br>
-<br>- Monitor the device's precise location to help users track and recover their devices if they are lost or stolen.
-<br>
-<br>- Notify users if their location services are turned off, which can make it harder to recover their device if it's lost or stolen.
-<br>
-<br>- Promote safe practices by encouraging users to keep their location services turned on, which can help prevent device theft and facilitate recovery.
-<br>
-<br>How We Handle Location Data
-<br>
-<br>We only access location data on the user's device and do not collect or store location data on our servers. The location data is used solely for the purposes of the Location Monitor feature and is not shared with third parties.
-<br>
-<br>User Control
-<br>
-<br>Users have full control over their location services and can turn them on or off at any time. If a user turns off location services, the Location Monitor dashboard will indicate that the feature is not functioning properly, and the user will be notified of the potential risks.
-<br>
-<br>Changes to This Privacy Policy
-<br>
-<br>I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.
-<br>
-<br>This policy is effective as of 2022-02-23
-<br>
-<br>Contact Us
-<br>
-<br>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at CyberTerroristDragon@protonmail.com.
-<br>
-<br></p>
-                
-            </div>
-        </div>
+  <!-- Header -->
+  <header>
+    <span class="dragon-icon">🐉</span>
+    <div class="app-name">Cyber Terrorist Dragon</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <div class="header-line"></div>
+    <div class="effective-badge">
+      <span class="dot"></span>
+      Effective: February 23, 2022
     </div>
-  
-  
+  </header>
+
+  <!-- Intro -->
+  <div class="intro-card">
+    <p>Cyber Terrorist Dragon built the <strong style="color:#fff">Plug</strong> as a free app. This SERVICE is provided at no cost and is intended for use as-is. This page informs visitors about policies regarding the collection, use, and disclosure of Personal Information when using this Service.</p>
+    <br>
+    <p>By choosing to use this Service, you agree to the collection and use of information in relation to this policy. Personal Information collected is used solely for providing and improving the Service and will not be shared with anyone except as described herein.</p>
+  </div>
+
+  <!-- Information Collection -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2>Information Collection &amp; Use</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>For a better experience while using our Service, we may require you to provide certain personally identifiable information. The information requested will be retained on your device and is not collected by us in any way.</p>
+    <p>The app does use third-party services that may collect information used to identify you. See the privacy policy of our third-party service provider:</p>
+    <a class="link-pill" href="https://policies.google.com/privacy" target="_blank">🔗 Google Play Services</a>
+  </div>
+
+  <!-- Log Data -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <h2>Log Data</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>Whenever you use this Service, in the case of an error in the app, data and information is collected (through third-party products) on your phone called Log Data. This Log Data may include:</p>
+    <ul>
+      <li>Your device Internet Protocol (IP) address</li>
+      <li>Device name and operating system version</li>
+      <li>App configuration when utilizing the Service</li>
+      <li>Time and date of your use of the Service</li>
+      <li>Other diagnostic statistics</li>
+    </ul>
+  </div>
+
+  <!-- Cookies -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🍪</div>
+      <h2>Cookies</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>Cookies are files with a small amount of data commonly used as anonymous unique identifiers, sent to your browser from websites you visit and stored on your device's internal memory.</p>
+    <p>This Service does not use cookies explicitly. However, the app may use third-party code and libraries that use cookies to collect information and improve their services. You have the option to accept or refuse these cookies. If you choose to refuse, some portions of this Service may not be available to you.</p>
+  </div>
+
+  <!-- Service Providers -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🤝</div>
+      <h2>Service Providers</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>Third-party companies and individuals may be employed for the following reasons:</p>
+    <ul>
+      <li>To facilitate our Service</li>
+      <li>To provide the Service on our behalf</li>
+      <li>To perform Service-related services</li>
+      <li>To assist in analyzing how our Service is used</li>
+    </ul>
+    <br>
+    <p>These third parties have access to your Personal Information only to perform tasks assigned on our behalf and are obligated not to disclose or use the information for any other purpose.</p>
+  </div>
+
+  <!-- Security -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔒</div>
+      <h2>Security</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>We value your trust in providing your Personal Information and strive to use commercially acceptable means of protecting it. However, no method of transmission over the internet or electronic storage is 100% secure and reliable — absolute security cannot be guaranteed.</p>
+  </div>
+
+  <!-- Links to Other Sites -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <h2>Links to Other Sites</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>This Service may contain links to other sites. Clicking a third-party link will direct you to that site. These external sites are not operated by us, and we strongly advise reviewing their Privacy Policies. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+  </div>
+
+  <!-- Children's Privacy -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>This Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided personal information, it will be immediately deleted from our servers.</p>
+    <p>If you are a parent or guardian and are aware that your child has provided us with personal information, please contact us so the necessary actions can be taken.</p>
+  </div>
+
+  <!-- Location Data -->
+  <div class="section location-section">
+    <div class="section-header">
+      <div class="section-icon">📍</div>
+      <h2>Location Data Usage</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>The <strong style="color:#fff">Plug</strong> app includes a <strong style="color: var(--red)">Location Monitor</strong> dashboard, which helps users keep their devices safe by monitoring changes to the location service.</p>
+
+    <div class="location-grid">
+      <div class="location-card">
+        <span class="lc-icon">📡</span>
+        <h3>Why We Use It</h3>
+        <p>Monitor precise location to help track and recover lost or stolen devices and promote safer practices.</p>
+      </div>
+      <div class="location-card">
+        <span class="lc-icon">🔐</span>
+        <h3>How We Handle It</h3>
+        <p>Location data is accessed only on-device. It is never collected, stored on our servers, or shared with third parties.</p>
+      </div>
+      <div class="location-card">
+        <span class="lc-icon">🎛️</span>
+        <h3>User Control</h3>
+        <p>You have full control over location services and can turn them on or off at any time via device settings.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Changes to Policy -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔄</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>This Privacy Policy may be updated from time to time. You are advised to review this page periodically for any changes. Any updates will be communicated by posting the new Privacy Policy on this page.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="section contact-section">
+    <div class="section-header" style="justify-content:center">
+      <div class="section-icon">✉️</div>
+      <h2>Contact Us</h2>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+    <p>If you have any questions or suggestions about this Privacy Policy, do not hesitate to reach out.</p>
+    <div class="contact-email">
+      📧 &nbsp;CyberTerroristDragon@protonmail.com
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2022 <span>Cyber Terrorist Dragon</span> · Plug App · All Rights Reserved</p>
+    <p style="margin-top:8px;font-size:11px;opacity:0.5">Privacy Policy · Last updated 2022-02-23</p>
+  </footer>
+
+</div>
 </body>
 </html>
